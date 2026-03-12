@@ -62,41 +62,4 @@ public class Nevem {
         return "" + vezeteknev.charAt(0)
                 + keresztnev.charAt(0);
     }
-
-
-    // 3. feladat
-    public String csere() {
-
-        String ujVezetek =
-                keresztnev.substring(0, 2)
-                        + vezeteknev.substring(2);
-
-        String ujKereszt =
-                vezeteknev.substring(0, 2)
-                        + keresztnev.substring(2);
-
-        return ujVezetek + " " + ujKereszt;
-    }
-
-
-    // 4. feladat ABC sorrend
-    public Map<Character, Integer> betuDbABC() {
-
-        Map<Character, Integer> map = new TreeMap<>();
-
-        String nev = vezeteknev + keresztnev;
-
-        for (int i = 0; i < nev.length(); i++) {
-
-            char karakter = nev.charAt(i);
-
-            if (map.containsKey(karakter)) {
-                map.put(karakter, map.get(karakter) + 1);
-            } else {
-                map.put(karakter, 1);
-            }
-        }
-
-        return map;
-    }
 }
